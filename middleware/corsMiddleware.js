@@ -1,7 +1,7 @@
 import cors from 'cors';
 
 const corsOptions = {
-    origin : 'https://acecoder-frontend.onrender.com',
+    origin : '*',
     optionsSuccessStatus : 200
 }
 
