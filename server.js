@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'path'
 import * as dotenv from 'dotenv'
 import {dbConnect} from './db/db.js';
+import corsMiddleware from './middleware/corsMiddleware.js';
 
 import codeExecutionRoutes from './routes/codeExecutionRoutes.js' 
 import userRoutes from './routes/userRoutes.js'
@@ -18,6 +19,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
+app.use(corsMiddleware);
 
 app.use('/code',codeExecutionRoutes)
 app.use('/user',userRoutes)
