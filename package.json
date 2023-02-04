@@ -1,0 +1,28 @@
+{
+  "name": "acecoder",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "this is a coding platform",
+  "main": "backend/server.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.5",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend",
+    "dev": "concurrently \"nodemon backend/server.js\" \"npm start --prefix frontend\""
+  },
+  "author": "",
+  "license": "ISC"
+}
